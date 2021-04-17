@@ -66,7 +66,7 @@ inputBottomText.addEventListener("keydown",()=>{
 
 function FbuttonClaro() {
     let buttonModo = document.getElementById('buttonClaroOscuro');
-    if (buttonModo.innerText == 'Modo Claro') 
-    buttonModo.innerText = 'Modo Oscuro';
-    else buttonModo.innerText = 'Modo Claro'; 
+    if (buttonModo.innerText == 'Modo Oscuro') 
+    buttonModo.innerText = 'Modo Claro';
+    else buttonModo.innerText = 'Modo Oscuro'; 
 }
