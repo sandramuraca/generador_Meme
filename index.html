@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f812df695.js" crossorigin="anonymous"></script>
+    <title> 📸Editor de Memes</title>
+</head>
+<body class="modoClaro">
+    <!-- HEADER-->
+    <header class="modoClaro panelInicio" >
+        <h1 class="tituloApp ">Generador de Memes</h1>
+        <div class="headerButtonContainer">
+            <button class="buttonHeader" id="buttonImage">
+                <i class="fas fa-image"></i>
+                Imagen
+            </button>
+            <button class="buttonHeader" id="buttonText">
+                <i class="fas fa-font"></i>
+                Texto
+            </button>
+            <button class="buttonClaroOscuro buttonHeader">
+                <i class="fas fa-lightbulb"></i>
+                Modo Claro
+            </button>
+
+        </div>
+    </header>
+    <!-- EDITOR CONTAINER-->    
+        <div class="divMeme ">
+
+            <main class="memeContainer">
+                <div class="recuadroMeme">
+                    <p class="textMeme" id="textoUsuarioTop">TOP TEXT</p>
+                    <div class="imgMeme"> <img src="" alt=""></div>
+                    <p class="textMeme" id= "textoUsuarioBottom">BOTTOM TEXT</p>
+                </div>
+
+                <button class="downloadMeme">
+                    <i class="fas fa-download"></i>
+                    Descargar meme
+                </button>
+
+            </main>
+
+            <!--ASIDE PANEL OCULTO-->
+            <aside class="panelControl modoClaro ocultar" id="panel">
+                <button class="cerrar button" id="buttonClose"><i class="fas fa-window-close"></i></button>
+
+                <!-- ASIDE PANEL IMAGEN-->
+                <section class="panelImagen">
+                    <h2>IMAGEN</h2>
+                    <div class="inputUrl">
+                        <h3>URL</h3>
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <!-- FONDO-->
+                    <div class="panelFondo">
+                        <h3>FONDO</h3>
+                        <div>
+                            <div class="color">
+                                <input type="color" name="" id="">ut
+                                <span>#FFFFF</span>
+                            </div>
+                           
+                            <div>
+                                <select name="" id="">
+                                    <option value="">Ninguno</option>
+                                    <option value="">Aclarar</option>
+                                    <option value="">Oscurecer</option>
+                                    <option value="">Diferencia</option>
+                                    <option value="">Luminosidad</option>
+                                    <option value="">Multipicar</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTROS-->
+
+                    <div>
+                        <h3>FILTROS</h3>
+                        <div class="barra">
+                            <label for="brillo">Brillo</label>
+                            <input type="range" name="" id="brillo">
+                        </div>
+
+                        <div class="barra">
+                            <label for="opacidad">Opacidad</label>
+                            <input type="range" name="" id="opacidad">
+                        </div>
+
+                        <div class="barra">
+                            <label for="contraste">Contraste</label>
+                            <input type="range" name="" id="contraste">
+                        </div>
+
+                        <div class="barra">
+                            <label for="desenfoque">Desenfoque</label>
+                            <input type="range" name="" id="desenfoque">
+                        </div>
+
+                        <div class="barra">
+                            <label for="escala">Escala de Grises</label>
+                            <input type="range" name="" id="escala">
+                        </div>
+
+                        <div class="barra">
+                            <label for="sepia">Sepia</label>
+                            <input type="range" name="" id="sepia">
+                        </div>
+
+                        <div class="barra">
+                            <label for="hue">Hue</label>
+                            <input type="range" name="" id="hue">
+                        </div>
+
+                        <div class="barra">
+                            <label for="saturado">Saturado</label>
+                            <input type="range" name="" id="saturado">
+                        </div>
+
+                        <div class="barra">
+                            <label for="negativo">Negativo</label>
+                            <input type="range" name="" id="negativo">
+                        </div>
+                        
+                    </div>
+
+                    <button>Restablecer Filtros</button>
+
+                </section>
+
+                 <!-- ASIDE PANEL TEXTO-->
+                <section class="panelTexto">
+                    <h2>TEXTO</h2>
+
+                    <!-- Texto-->
+                    <div>
+                        <h3>SUPERIOR</h3>
+                            
+                            <textarea name="" id="topText" cols="60" rows="2">
+                            Top Text
+                            </textarea>
+                        <div>
+                            <input type="checkbox" name="" id="">
+                            <label for="topText">Sin texto superior</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>INFERIOR</h3>
+                        <textarea name="" id="bottomText" cols="60" rows="2">Bottom Text</textarea>
+                        <div>
+                            <input type="checkbox" name="" id="">
+                            <label for="bottomText">Sin texto inferior</label>
+                        </div>
+                    </div>
+
+                    <!-- Fuente-->
+                    <div>
+                        <h3>FUENTE</h3>
+                        <!-- Tipo Fuente-->
+                        <div>
+                            <select name="" id="" class="familiaFuente">
+                                <option value="">Arial</option>
+                                <option value="">Arial Blanck</option>
+                                <option value="">American Typewriter</option>
+                                <option value="">Andale</option>
+                                <option value="">Comic Sans</option>
+                                <option value="">Helvatica</option>
+                                <option value="">Impact</option>
+                                <option value="">Verdana</option>
+                                <option value="">Times New Roman</option>
+                            </select>
+                        </div>
+                        <!-- Tamañio Fuente-->
+                            <input type="number" name="" id="" class="tamanioFuente">
+                        <!-- Alineacion Fuente-->
+                        <div class="buttonAling">
+                            <button class="left">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                            <button class="center">
+                                <i class="fas fa-align-center"></i>
+                            </button>
+                            <button class="rigth">
+                                <i class="fas fa-align-right"></i>
+                            </button>
+                        </div>
+
+                        <div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+            </aside>
+        </div>
+
+   
+    
+    <!-- link a JS-->
+    <script src="./app.js"></script>
+</body>
+</html>
