@@ -12,12 +12,23 @@ buttonClose.addEventListener("click", ()=>{
     panel.classList.add("ocultar");
 }
 )
-const buttonImage = document.querySelector("#buttonImage");//boton img header
-const buttonText = document.querySelector("#buttonText");//boton text header
-const buttonClaroOscuro = document.querySelector(".buttonClaroOscuro"); //boton modo claro-oscuro
-const panelInicio = document.querySelector(".panelInicio"); //header
-const panelImag = document.querySelector(".panelImagen"); //panel img del aside
-const panelTexto = document.querySelector(".panelTexto"); //panel texto del aside
+//boton img header
+const buttonImage = document.querySelector("#buttonImage");
+
+//boton text header
+const buttonText = document.querySelector("#buttonText");
+
+//boton modo claro-oscuro
+const buttonClaroOscuro = document.querySelector(".buttonClaroOscuro");
+
+//header
+const panelInicio = document.querySelector(".panelInicio"); 
+
+//panel img del aside
+const panelImag = document.querySelector(".panelImagen"); 
+
+//panel texto del aside
+const panelTexto = document.querySelector(".panelTexto"); 
 
 const body = document.querySelector("body");
 
@@ -48,25 +59,56 @@ buttonClaroOscuro.addEventListener("click", ()=>{
 )
 
 //indicación para que en el recuadro de texto de arriba y abajo de la imagen de vea lo que el usuario escriba en el text area del panel de texto:
-const inputTextTop = document.querySelector("#topText");
-const textoUsuarioTop = document.querySelector("#textoUsuarioTop");
+//campo donde el usuario ingresa el dato
+const inputTextTop = document.querySelector("#topText"); 
+
+//campo donde se refleja ese dato, arriba de la imagen
+const textoUsuarioTop = document.querySelector("#textoUsuarioTop"); 
 
 inputTextTop.addEventListener("keydown",()=>{
     textoUsuarioTop.textContent= inputTextTop.value;
 });
 
+//campo donde el usuario ingresa el dato
 const inputBottomText = document.querySelector("#bottomText");
+
+//campo donde se refleja ese dato, abajo de la imagen
 const textoUsuarioBottom = document.querySelector("#textoUsuarioBottom");
 
 inputBottomText.addEventListener("keydown",()=>{
     textoUsuarioBottom.textContent= inputBottomText.value;
 });
 
-//cambiar el texto del boton modo claro - oscuro
 
+//cambiar el texto del boton modo claro - oscuro
 function FbuttonClaro() {
     let buttonModo = document.getElementById('buttonClaroOscuro');
     if (buttonModo.innerText == 'Modo Oscuro') 
     buttonModo.innerText = 'Modo Claro';
     else buttonModo.innerText = 'Modo Oscuro'; 
 }
+
+/*ocular paneles de texto arriba y abajo de la imagen*/
+
+
+const checkTopText = document.querySelector("#checkTopTex");
+
+checkTopText.addEventListener("click", ()=>{
+    if(checkTopText.checked){
+        textoUsuarioTop.classList.add("ocultar")
+    } else {
+        textoUsuarioTop.classList.remove("ocultar")
+    }
+}); 
+
+
+//checkbox panel texto text area abajo imagen
+const checkBottomText = document.querySelector("#checkBottomTex");
+
+checkBottomText.addEventListener("click", ()=>{
+    if(checkBottomText.checked){
+        textoUsuarioBottom.classList.add("ocultar")
+    } else {
+        textoUsuarioBottom.classList.remove("ocultar")
+    }
+}); 

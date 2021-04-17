@@ -45,8 +45,7 @@ body{
 .tituloApp{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 28
-    px;
+    font-size: 40px;
     text-align: center;
     padding-top: 10px;
 }
@@ -67,6 +66,13 @@ body{
     height: 30px;
     background-color: var(--colorHeader);
     color: var(--color);
+    font-size: 20px;
+}
+
+.buttonHeader:hover{
+    background-color: var(--colorFondo);
+    transition: 0.5s;
+    border-radius: 5px;
 }
 
 
@@ -131,9 +137,15 @@ body{
     top:15px;
     right: 40px;
     z-index: 1;
+    background-color: var(--fondoMain);
+    border: 0;
+    font-size: 24px;
+    color: var(--color);
 }
 
 
+
+/*clase para ocultar los paneles o elementos necesarios*/
 .ocultar{
     display: none;
 } 
