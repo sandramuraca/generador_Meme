@@ -12,12 +12,13 @@ buttonClose.addEventListener("click", ()=>{
     panel.classList.add("ocultar");
 }
 )
-const buttonImage = document.querySelector("#buttonImage");
-const buttonText = document.querySelector("#buttonText");
-const panelInicio = document.querySelector(".panelInicio");
-const panelImag = document.querySelector(".panelImagen");
-const panelTexto = document.querySelector(".panelTexto");
-const buttonClaroOscuro = document.querySelector(".buttonClaroOscuro");
+const buttonImage = document.querySelector("#buttonImage");//boton img header
+const buttonText = document.querySelector("#buttonText");//boton text header
+const buttonClaroOscuro = document.querySelector(".buttonClaroOscuro"); //boton modo claro-oscuro
+const panelInicio = document.querySelector(".panelInicio"); //header
+const panelImag = document.querySelector(".panelImagen"); //panel img del aside
+const panelTexto = document.querySelector(".panelTexto"); //panel texto del aside
+
 const body = document.querySelector("body");
 
 //cuando hago click en el boton imagen o texto quiero que se vea el aside
@@ -60,3 +61,12 @@ const textoUsuarioBottom = document.querySelector("#textoUsuarioBottom");
 inputBottomText.addEventListener("keydown",()=>{
     textoUsuarioBottom.textContent= inputBottomText.value;
 });
+
+//cambiar el texto del boton modo claro - oscuro
+
+function FbuttonClaro() {
+    let buttonModo = document.getElementById('buttonClaroOscuro');
+    if (buttonModo.innerText == 'Modo Claro') 
+    buttonModo.innerText = 'Modo Oscuro';
+    else buttonModo.innerText = 'Modo Claro'; 
+}
