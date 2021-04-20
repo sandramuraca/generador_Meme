@@ -1,4 +1,5 @@
 "use strict";
+
 //ASIDE
 const panel = document.querySelector("#panel");
 
@@ -52,11 +53,21 @@ buttonText.addEventListener("click", ()=>{
 )
 
 //modo claro o modo oscuro, los colores fueron definidos en el css con variables
+//cambiar el texto del boton modo claro - oscuro
+
+const textoButton = document.querySelector("#textoButton");
+
 buttonClaroOscuro.addEventListener("click", ()=>{
    body.classList.toggle("modoClaro");
    body.classList.toggle("modoOscuro");
-}
-)
+
+   if (textoButton.innerText == 'Modo Claro'){
+        textoButton.innerText = 'Modo Oscuro';
+        } else {
+        textoButton.innerText = 'Modo Claro';
+        }
+    }
+);
 
 //indicación para que en el recuadro de texto de arriba y abajo de la imagen de vea lo que el usuario escriba en el text area del panel de texto:
 //campo donde el usuario ingresa el dato
@@ -65,7 +76,7 @@ const inputTextTop = document.querySelector("#topText");
 //campo donde se refleja ese dato, arriba de la imagen
 const textoUsuarioTop = document.querySelector("#textoUsuarioTop"); 
 
-inputTextTop.addEventListener("keydown",()=>{
+inputTextTop.addEventListener("input",()=>{
     textoUsuarioTop.textContent= inputTextTop.value;
 });
 
@@ -75,18 +86,13 @@ const inputBottomText = document.querySelector("#bottomText");
 //campo donde se refleja ese dato, abajo de la imagen
 const textoUsuarioBottom = document.querySelector("#textoUsuarioBottom");
 
-inputBottomText.addEventListener("keydown",()=>{
+inputBottomText.addEventListener("input",()=>{
     textoUsuarioBottom.textContent= inputBottomText.value;
 });
 
 
-//cambiar el texto del boton modo claro - oscuro
-function FbuttonClaro() {
-    let buttonModo = document.getElementById('buttonClaroOscuro');
-    if (buttonModo.innerText == 'Modo Oscuro') 
-    buttonModo.innerText = 'Modo Claro';
-    else buttonModo.innerText = 'Modo Oscuro'; 
-}
+
+
 
 /*ocular paneles de texto arriba y abajo de la imagen*/
 
@@ -112,3 +118,48 @@ checkBottomText.addEventListener("click", ()=>{
         textoUsuarioBottom.classList.remove("ocultar")
     }
 }); 
+
+//cambio tipografias en el campo arriba y abajo de la imagen
+//se selecciona el select de las opciones
+
+const selectTipografias = document.querySelector("#selectTipodrafias");
+
+selectTipografias.addEventListener("input", () => {
+    textoUsuarioTop.style.fontFamily = selectTipografias.value;
+    textoUsuarioBottom.style.fontFamily = selectTipografias.value;
+}
+);
+
+//cambio tamaño  tipografias en el campo arriba y abajo de la imagen
+
+const tamanioFuente = document.querySelector("#tamanioFuente");
+
+tamanioFuente.addEventListener("input", () => {
+    textoUsuarioTop.style.fontSize = `${tamanioFuente.value}px`;
+    textoUsuarioBottom.style.fontSize  = `${tamanioFuente.value}px`;
+    console.log({textoUsuarioTop,textoUsuarioBottom,tamanio:tamanioFuente.value})
+}
+);
+
+//cambio de alineación de la fuente
+
+const alignLeft = document.querySelector(".left");
+const alignCenter = document.querySelector(".center");
+const alignRight = document.querySelector(".right");
+
+alignLeft.addEventListener("click", () => {
+    textoUsuarioTop.style = `text-align: left;`
+    textoUsuarioBottom.style = `text-align: left;`
+})
+
+alignCenter.addEventListener("click", () => {
+    textoUsuarioTop.style = `text-align: center;`
+    textoUsuarioBottom.style = `text-align: center;`
+})
+
+alignRight.addEventListener("click", () => {
+    textoUsuarioTop.style = `text-align: right;`
+    textoUsuarioBottom.style = `text-align: right;`
+})
+
+/*textoUsuarioBottom.style = `font-size: 40px;`*/

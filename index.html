@@ -21,9 +21,9 @@
                 <i class="fas fa-font"></i>
                 Texto
             </button>
-            <button class="buttonClaroOscuro buttonHeader" id="buttonClaroOscuro" onclick="FbuttonClaro()">
+            <button class="buttonClaroOscuro buttonHeader" id="buttonClaroOscuro">
                 <i class="fas fa-lightbulb"></i>
-                Modo Claro
+                <span id="textoButton">Modo Oscuro</span>
             </button>
 
         </div>
@@ -142,7 +142,7 @@
                     <div>
                         <h3>SUPERIOR</h3>
                             
-                            <textarea name="" id="topText" cols="60" rows="2">
+                            <textarea  name="" id="topText" cols="60" rows="2">
                             Top Text
                             </textarea>
                         <div>
@@ -167,29 +167,30 @@
                         <h3>FUENTE</h3>
                         <!-- Tipo Fuente-->
                         <div>
-                            <select name="" id="" class="familiaFuente">
-                                <option value="">Arial</option>
-                                <option value="">Arial Blanck</option>
-                                <option value="">American Typewriter</option>
-                                <option value="">Andale</option>
-                                <option value="">Comic Sans</option>
-                                <option value="">Helvatica</option>
-                                <option value="">Impact</option>
-                                <option value="">Verdana</option>
-                                <option value="">Times New Roman</option>
+                            <select name="" id="selectTipodrafias" class="familiaFuente">
+                                <option value="Arial">Arial</option>
+                                <option value="'Trebuchet MS'">Trebuchet</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="'Lucida Sans'">Lucida Sans</option>
+                                <option value="'Courier New'">Courier New</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Impact">Impact</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="'Times New Roman'">Times New Roman</option>
                             </select>
                         </div>
+
                         <!-- Tamañio Fuente-->
-                            <input type="number" name="" id="" class="tamanioFuente">
+                            <input type="number" name="" id="tamanioFuente" class="" min="10" max="40" value="15">
                         <!-- Alineacion Fuente-->
-                        <div class="buttonAling">
+                        <div class="buttonAlign">
                             <button class="left">
                                 <i class="fas fa-align-left"></i>
                             </button>
                             <button class="center">
                                 <i class="fas fa-align-center"></i>
                             </button>
-                            <button class="rigth">
+                            <button class="right">
                                 <i class="fas fa-align-right"></i>
                             </button>
                         </div>
