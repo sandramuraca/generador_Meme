@@ -149,3 +149,18 @@ body{
 .ocultar{
     display: none;
 } 
+
+/*Versión escritorio*/
+@media (min-width: 1000px) {
+    .panelControl{
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
