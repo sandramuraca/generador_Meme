@@ -51,15 +51,15 @@
 
                 <!-- ASIDE PANEL IMAGEN-->
                 <section class="panelImagen">
-                    <h2>IMAGEN</h2>
+                    <h2 class="tituloSection">IMAGEN</h2>
                     <div class="inputUrl">
-                        <h3>URL</h3>
+                        <h3 class="tituloPropiedades">URL</h3>
                         <input type="text" name="" id="">
                     </div>
 
                     <!-- FONDO-->
                     <div class="panelFondo">
-                        <h3>FONDO</h3>
+                        <h3 class="tituloPropiedades">FONDO</h3>
                         <div>
                             <div class="color">
                                 <input type="color" name="" id="">ut
@@ -136,24 +136,24 @@
 
                  <!-- ASIDE PANEL TEXTO-->
                 <section class="panelTexto">
-                    <h2>TEXTO</h2>
+                    <h2 class="tituloSection">TEXTO</h2>
 
                     <!-- Texto-->
                     <div>
-                        <h3>SUPERIOR</h3>
+                        <h3 class="tituloPropiedades">SUPERIOR</h3>
                             
-                            <textarea  name="" id="topText" cols="60" rows="2">
+                            <textarea  name="" id="topText" cols="30" rows="2" class="input">
                             Top Text
                             </textarea>
                         <div>
-                            <input type="checkbox" name="" id="checkTopTex">
+                            <input type="checkbox" name="" id="checkTopTex" >
                             <label for="topText">Sin texto superior</label>
                         </div>
                     </div>
 
                     <div>
-                        <h3>INFERIOR</h3>
-                        <textarea name="" id="bottomText" cols="60" rows="2">
+                        <h3 class="tituloPropiedades">INFERIOR</h3>
+                        <textarea name="" id="bottomText" cols="30" rows="2" class="input">
                             Bottom Text
                         </textarea>
                         <div>
@@ -163,34 +163,36 @@
                     </div>
 
                     <!-- Fuente-->
-                    <div>
-                        <h3>FUENTE</h3>
+                    <div >
+                        <h3 class="tituloPropiedades">FUENTE</h3>
                         <!-- Tipo Fuente-->
                         
-                        <select name="" id="selectTipodrafias" class="familiaFuente">
+                        <select name="" id="selectTipodrafias" class="familiaFuente input">
+                            <option value="Impact">Impact</option>
                             <option value="Arial">Arial</option>
                             <option value="'Trebuchet MS'">Trebuchet</option>
                             <option value="fantasy">Fantasy</option>
                             <option value="'Lucida Sans'">Lucida Sans</option>
                             <option value="'Courier New'">Courier New</option>
                             <option value="Helvetica">Helvetica</option>
-                            <option value="Impact">Impact</option>
                             <option value="Verdana">Verdana</option>
                             <option value="'Times New Roman'">Times New Roman</option>
                         </select>
                         
                         <div class="tamanioAlineacion">
                         <!-- Tamañio Fuente-->
-                            <input type="number" name="" id="tamanioFuente" class="" min="10" max="40" value="15">
+                            <div class="tamamio">
+                                <input type="number" name="" id="tamanioFuente" class="input " min="10" max="40" value="40">
+                            </div>
                         <!-- Alineacion Fuente-->
                             <div class="buttonAlign">
-                                <button class="left">
+                                <button class="left input buttonAncho">
                                     <i class="fas fa-align-left"></i>
                                 </button>
-                                <button class="center">
+                                <button class="center input buttonAncho">
                                     <i class="fas fa-align-center"></i>
                                 </button>
-                                <button class="right">
+                                <button class="right input buttonAncho">
                                     <i class="fas fa-align-right"></i>
                                 </button>
                             </div>
@@ -202,7 +204,7 @@
                     <div class="colorTextoYFondo">
                         <!-- Color de Texto-->
                         <div class="colorTexto">
-                            <h3>COLOR</h3>
+                            <h3 class="tituloPropiedades">COLOR</h3>
                             <div>
                                 <input type="color" name="colorDeTexto" id="" value="#000000">
                                 <span>#000000</span>
@@ -211,7 +213,7 @@
                             </div>
                         <!-- Color de Fondo-->
                          <div class="colorFondo">
-                            <h3>FONDO</h3>
+                            <h3 class="tituloPropiedades">FONDO</h3>
                             <div>
                                 <input type="color" name="colorDeTexto" id="" value="#FFFFFF">
                                 <span>#FFFFFF</span>
@@ -227,7 +229,7 @@
 
                     <!-- Contorno-->
                     <div class="contorno">
-                        <h3>CONTORNO</h3>
+                        <h3 class="tituloPropiedades">CONTORNO</h3>
                         <div class="buttonContorno">
                             <button class="nimguno">Ninguno</button>
                             <button class="claro">Claro</button>
@@ -245,7 +247,7 @@
                     <!-- Interlineado-->
 
                     <div class="interlineado">
-                        <h3>INTERLINEADO</h3>
+                        <h3 class="tituloPropiedades">INTERLINEADO</h3>
                         <select name="" id="">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>

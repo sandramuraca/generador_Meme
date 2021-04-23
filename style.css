@@ -14,6 +14,7 @@ body.modoClaro{
     --color:  rgb(52, 63, 62);
     --fondoMain: rgb(220, 237, 255);
     --colorHeader: rgb(148, 176, 218);
+    --colorPanel: rgb(146, 167, 199);
 }
 
 body.modoOscuro{
@@ -21,7 +22,12 @@ body.modoOscuro{
     --color: rgb(220, 237, 255);
     --fondoMain: rgb(18, 22, 22);
     --colorHeader: rgb(80, 90, 91);
+    --colorPanel:rgb(52, 63, 62);
 }
+
+/*:root{
+    --font-primary: 'Open Sans', sans-serif;
+}*/
 
 
 body{
@@ -96,8 +102,8 @@ body{
 
 /*texto arriba y abajo de la imagen*/
 .textMeme{
-    font-family: Arial;
-    font-size: 30px;
+    font-family: Impact;
+    font-size: 40px;
     background-color: white;
     width: 610px;
     height: 70px;
@@ -124,12 +130,61 @@ body{
     background-color: var(--fondoMain);/*aplicacion de variable*/
     position: fixed;
     top:0;
-    left: 0;
+    right: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 10px  010px ;
 }
+
+.tituloSection{
+    text-align: center;
+}
+
+/* h3 de cada seccion*/
+.tituloPropiedades{
+    font-size: 16px;
+    padding: 10px
+}
+
+.input{
+    background-color: var(--fondoMain);
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+
+.familiaFuente{
+    width: 227px;
+}
+
+.tamanioAlineacion{
+    padding: 5px 0 0 0 ;
+    width: 227px;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+     
+}
+
+.tamanio{
+    width: 100%;
+}
+
+#tamanioFuente{
+  width: 100%;  
+}
+
+.buttonAlign{
+    width: 50%;
+}
+
+.buttonAncho{
+    width: 30%;
+}
+
 
 /*icono cruz para cerrar paneles aside*/
 .cerrar{
@@ -152,15 +207,17 @@ body{
 
 /*Versión escritorio*/
 @media (min-width: 1000px) {
-    .panelControl{
-        display: flex;
-        flex-direction: column;
+
+    .panelControl {
         width: 260px;
         height: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
         z-index: 10;
+        background-color: var(--colorPanel);
+        box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);;
+    }
+
+    .cerrar{
+        background-color: var(--colorPanel);
     }
 }
 

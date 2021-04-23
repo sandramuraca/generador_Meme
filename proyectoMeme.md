@@ -14,6 +14,7 @@ El objetivo es poder generar interacción con el usuario mediante los eventos de
 ### Paleta colores:
 - rgb(220, 237, 255)
 - rgb(148, 176, 218)
+- rgb(146, 167, 199)
 - rgb(143, 145, 162)
 - rgb(80, 90, 91)
 - rgb(52, 63, 62)
