@@ -166,39 +166,97 @@
                     <div>
                         <h3>FUENTE</h3>
                         <!-- Tipo Fuente-->
-                        <div>
-                            <select name="" id="selectTipodrafias" class="familiaFuente">
-                                <option value="Arial">Arial</option>
-                                <option value="'Trebuchet MS'">Trebuchet</option>
-                                <option value="fantasy">Fantasy</option>
-                                <option value="'Lucida Sans'">Lucida Sans</option>
-                                <option value="'Courier New'">Courier New</option>
-                                <option value="Helvetica">Helvetica</option>
-                                <option value="Impact">Impact</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="'Times New Roman'">Times New Roman</option>
-                            </select>
-                        </div>
-
+                        
+                        <select name="" id="selectTipodrafias" class="familiaFuente">
+                            <option value="Arial">Arial</option>
+                            <option value="'Trebuchet MS'">Trebuchet</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="'Lucida Sans'">Lucida Sans</option>
+                            <option value="'Courier New'">Courier New</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="'Times New Roman'">Times New Roman</option>
+                        </select>
+                        
+                        <div class="tamanioAlineacion">
                         <!-- Tamañio Fuente-->
                             <input type="number" name="" id="tamanioFuente" class="" min="10" max="40" value="15">
                         <!-- Alineacion Fuente-->
-                        <div class="buttonAlign">
-                            <button class="left">
-                                <i class="fas fa-align-left"></i>
-                            </button>
-                            <button class="center">
-                                <i class="fas fa-align-center"></i>
-                            </button>
-                            <button class="right">
-                                <i class="fas fa-align-right"></i>
-                            </button>
-                        </div>
-
-                        <div>
-
+                            <div class="buttonAlign">
+                                <button class="left">
+                                    <i class="fas fa-align-left"></i>
+                                </button>
+                                <button class="center">
+                                    <i class="fas fa-align-center"></i>
+                                </button>
+                                <button class="right">
+                                    <i class="fas fa-align-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Color  Texto y Fondo-->
+                        
+                    <div class="colorTextoYFondo">
+                        <!-- Color de Texto-->
+                        <div class="colorTexto">
+                            <h3>COLOR</h3>
+                            <div>
+                                <input type="color" name="colorDeTexto" id="" value="#000000">
+                                <span>#000000</span>
+                            </div>
+
+                            </div>
+                        <!-- Color de Fondo-->
+                         <div class="colorFondo">
+                            <h3>FONDO</h3>
+                            <div>
+                                <input type="color" name="colorDeTexto" id="" value="#FFFFFF">
+                                <span>#FFFFFF</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Check fondo transparente-->
+                        <div>
+                            <input type="checkbox" name="" id="fondoTransparente">
+                            <label for="fondoTransparente">Fondo Transparente</label>
+                        </div>
+                    </div>
+
+                    <!-- Contorno-->
+                    <div class="contorno">
+                        <h3>CONTORNO</h3>
+                        <div class="buttonContorno">
+                            <button class="nimguno">Ninguno</button>
+                            <button class="claro">Claro</button>
+                            <button class="Oscuro">Oscuro</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Espaciado-->
+
+                    <div class="espaciado">
+                        <h3>ESPACIADO</h3>
+                        <input type="number" name="" id="" max="20" min="10" value="10">
+                    </div>
+
+                    <!-- Interlineado-->
+
+                    <div class="interlineado">
+                        <h3>INTERLINEADO</h3>
+                        <select name="" id="">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
+                    </div>
+
+                </div>
 
                 </section>
 

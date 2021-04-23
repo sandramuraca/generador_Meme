@@ -97,13 +97,13 @@ body{
 /*texto arriba y abajo de la imagen*/
 .textMeme{
     font-family: Arial;
-    font-size: 15px;
+    font-size: 30px;
     background-color: white;
     width: 610px;
     height: 70px;
     text-align: center;
-    padding: 10px 0 0 0;
-    
+    padding: 17px 0 0 0;
+    color: rgb(52, 63, 62);
 }
 
 /*botón descarga meme*/
