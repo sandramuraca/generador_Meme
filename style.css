@@ -148,27 +148,32 @@ body{
     padding: 10px
 }
 
+/* estilos de los recuadros y botones de los paneles*/
 .input{
     background-color: var(--fondoMain);
     border-radius: 5px;
     border: none;
     height: 30px;
+    padding: 8px;
+    color: var (var(--color));
 }
 
+/* ancho caja para cambiar tipografias*/
 .familiaFuente{
-    width: 227px;
+    width: 252px;
 }
 
+/*botones de alineacion y tamaño de fuente */
 .tamanioAlineacion{
     padding: 5px 0 0 0 ;
-    width: 227px;  
+    width: 252px;  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
      
 }
-
+/*div que contiene botones de alineacion y tamaño fuente*/
 .tamanio{
     width: 100%;
 }
@@ -181,6 +186,7 @@ body{
     width: 50%;
 }
 
+/*Ancho de los botones d ealieacion*/
 .buttonAncho{
     width: 30%;
 }
@@ -198,6 +204,42 @@ body{
     color: var(--color);
 }
 
+/*color de tipografia y fondo*/
+
+.colorFondoyTipografia{
+    width: 50%;
+    font-size: 14px;
+}
+
+.check{
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/*input color estilo circular*/
+input[type='color']{
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border-radius: 50%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/*clases contorno texto*/
+.sinContorno{
+    text-shadow: none;
+}
+.contornoClaro{
+    text-shadow: rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px;
+}
+
+.contornoOscuro{
+    text-shadow: rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px;
+}
 
 
 /*clase para ocultar los paneles o elementos necesarios*/
@@ -209,15 +251,22 @@ body{
 @media (min-width: 1000px) {
 
     .panelControl {
-        width: 260px;
+        width: 280px;
         height: 100%;
         z-index: 10;
         background-color: var(--colorPanel);
-        box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);;
+        box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+        padding: 20px  20px 0 10px;
     }
 
+    .panelControl.ocultar{
+        display: block;
+    }
     .cerrar{
         background-color: var(--colorPanel);
     }
 }
 
+.ejemplo{
+    padding: ;
+}

@@ -34,8 +34,8 @@
             <main class="memeContainer">
                 <div class="recuadroMeme">
                     <p class="textMeme" id="textoUsuarioTop">TOP TEXT</p>
-                    <div class="imgMeme"> <img src="" alt=""></div>
-                    <p class="textMeme" id= "textoUsuarioBottom">BOTTOM TEXT</p>
+                    <div> <img src="" alt="" class="imgMeme"></div>
+                    <p class="textMeme" id="textoUsuarioBottom">BOTTOM TEXT</p>
                 </div>
 
                 <button class="downloadMeme">
@@ -54,20 +54,21 @@
                     <h2 class="tituloSection">IMAGEN</h2>
                     <div class="inputUrl">
                         <h3 class="tituloPropiedades">URL</h3>
-                        <input type="text" name="" id="">
+                        <input type="text" name="" id="urlImgMeme" class="input">
                     </div>
 
                     <!-- FONDO-->
                     <div class="panelFondo">
                         <h3 class="tituloPropiedades">FONDO</h3>
-                        <div>
-                            <div class="color">
+                        <div >
+                            
+                            <div class="color input">
                                 <input type="color" name="" id="">ut
                                 <span>#FFFFF</span>
                             </div>
                            
                             <div>
-                                <select name="" id="">
+                                <select name="" id="" class="input">
                                     <option value="">Ninguno</option>
                                     <option value="">Aclarar</option>
                                     <option value="">Oscurecer</option>
@@ -135,7 +136,7 @@
                 </section>
 
                  <!-- ASIDE PANEL TEXTO-->
-                <section class="panelTexto">
+                <section class="panelTexto ocultar">
                     <h2 class="tituloSection">TEXTO</h2>
 
                     <!-- Texto-->
@@ -145,7 +146,7 @@
                             <textarea  name="" id="topText" cols="30" rows="2" class="input">
                             Top Text
                             </textarea>
-                        <div>
+                        <div class="check">
                             <input type="checkbox" name="" id="checkTopTex" >
                             <label for="topText">Sin texto superior</label>
                         </div>
@@ -205,50 +206,51 @@
                         <!-- Color de Texto-->
                         <div class="colorTexto">
                             <h3 class="tituloPropiedades">COLOR</h3>
-                            <div>
-                                <input type="color" name="colorDeTexto" id="" value="#000000">
-                                <span>#000000</span>
+                            <div class="input colorFondoyTipografia">
+                                <input type="color" name="colorDeTexto" id="colorDeTexto"  value="#000000">
+                                <span id="refSpanTexto">#000000</span>
                             </div>
 
                             </div>
                         <!-- Color de Fondo-->
                          <div class="colorFondo">
                             <h3 class="tituloPropiedades">FONDO</h3>
-                            <div>
-                                <input type="color" name="colorDeTexto" id="" value="#FFFFFF">
-                                <span>#FFFFFF</span>
+                            <div class="input colorFondoyTipografia">
+                                <input type="color" name="colorDeFondo" id="colorDeFondo" value="#FFFFFF">
+                                <span id="refSpanFondo">#FFFFFF</span>
                             </div>
                         </div>
-                        
+                    </div>
+
                         <!-- Check fondo transparente-->
-                        <div>
+                        <div class="check">
                             <input type="checkbox" name="" id="fondoTransparente">
                             <label for="fondoTransparente">Fondo Transparente</label>
                         </div>
-                    </div>
+                    
 
                     <!-- Contorno-->
                     <div class="contorno">
                         <h3 class="tituloPropiedades">CONTORNO</h3>
                         <div class="buttonContorno">
-                            <button class="nimguno">Ninguno</button>
-                            <button class="claro">Claro</button>
-                            <button class="Oscuro">Oscuro</button>
+                            <button class="ninguno input">Ninguno</button>
+                            <button class="claro input">Claro</button>
+                            <button class="oscuro input">Oscuro</button>
                         </div>
                     </div>
                     
                     <!-- Espaciado-->
 
                     <div class="espaciado">
-                        <h3>ESPACIADO</h3>
-                        <input type="number" name="" id="" max="20" min="10" value="10">
+                        <h3 class="tituloPropiedades">ESPACIADO</h3>
+                        <input type="number" name="" id="espaciado" max="20" min="10" value="10" class="input ">
                     </div>
 
                     <!-- Interlineado-->
 
                     <div class="interlineado">
                         <h3 class="tituloPropiedades">INTERLINEADO</h3>
-                        <select name="" id="">
+                        <select name="" id="interlineado" class="input">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2">1.2</option>
