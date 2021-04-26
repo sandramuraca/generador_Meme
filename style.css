@@ -25,10 +25,6 @@ body.modoOscuro{
     --colorPanel:rgb(52, 63, 62);
 }
 
-/*:root{
-    --font-primary: 'Open Sans', sans-serif;
-}*/
-
 
 body{
     background-color: var(--colorFondo); /*aplicacion de variable*/
@@ -267,6 +263,3 @@ input[type='color']{
     }
 }
 
-.ejemplo{
-    padding: ;
-}

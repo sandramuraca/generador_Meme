@@ -72,11 +72,26 @@ buttonClaroOscuro.addEventListener("click", ()=>{
 //***** PANEL IMAGEN EVENTOS ********* */
 
 //IMPUT IMG
-const urlImgMeme = document.querySelector("#urlImgMeme");
+const urlImgMeme = document.querySelector(".urlImgMeme");
 
-//ETIQUETA IMG
+//DIV IMG
 const imgMeme = document.querySelector(".imgMeme");
-imgMeme.src = urlImgMeme;
+
+urlImgMeme.addEventListener("input", ()=>{
+    const url = urlImgMeme.value;
+    imgMeme.style.backgroundImage = `url('${url}')`;
+});
+
+//COLOR FONDO DIV IMG
+const colorFondoImg = document.querySelector("#colorFondoImg");//div img
+const colorFondoDiv = document.querySelector("#colorFondoDiv"); //input color
+const nombreColorFondoDiv = document.querySelector("#nombreColorFondoDiv"); //span ref color
+
+colorFondoDiv.addEventListener("input", ()=>{
+    colorFondoImg.style.backgroundColor = colorFondoDiv.value;
+    nombreColorFondoDiv.textContent = `${colorFondoDiv.value}`;
+});
+
 
 
 
