@@ -1,7 +1,7 @@
 "use strict";
 
 //--------ASIDE--------
-const panel = document.querySelector("#panel");
+const panel = document.querySelector("#panelAside");
 
 //--------BOTON CRUZ PARA CERRAR--------
 const buttonClose =document.querySelector("#buttonClose");
@@ -27,6 +27,7 @@ const panelInicio = document.querySelector(".panelInicio");
 
 //--------PANEL IMG - ASIDE--------
 const panelImag = document.querySelector(".panelImagen"); 
+
 
 //--------PANEL TEXTO - ASIDE--------
 const panelTexto = document.querySelector(".panelTexto"); 
@@ -143,7 +144,7 @@ checkBottomText.addEventListener("click", ()=>{
 }); 
 
 //--------CAMBIO TIPOGRAFIA--------
-//se selecciona el select de las opciones
+//select de las opciones
 const selectTipografias = document.querySelector("#selectTipodrafias");
 
 selectTipografias.addEventListener("input", () => {

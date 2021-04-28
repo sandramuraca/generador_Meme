@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
 *{
     margin: 0px;
@@ -18,7 +19,7 @@ body.modoClaro{
 }
 
 body.modoOscuro{
-   --colorFondo: rgb(52, 63, 62) ;
+   --colorFondo: rgb(52, 63, 62);
     --color: rgb(220, 237, 255);
     --fondoMain: rgb(18, 22, 22);
     --colorHeader: rgb(80, 90, 91);
@@ -46,9 +47,9 @@ body{
 }
 
 .tituloApp{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Londrina Solid', cursive;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     padding-top: 10px;
 }
@@ -61,7 +62,7 @@ body{
 }
 
 .buttonHeader{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
     border: 0;
     outline: none;
     padding: 0 10px 0 10px;
@@ -94,6 +95,11 @@ body{
     background-color: black;
     width: 610px;
     height: 470px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 /*texto arriba y abajo de la imagen*/
@@ -110,7 +116,7 @@ body{
 
 /*botón descarga meme*/
 .downloadMeme{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
     background-color: rgb(97, 201, 168);
     color: white;
     border: 0 ;
@@ -123,63 +129,128 @@ body{
 
 /*Aside*/
 .panelControl{
-    background-color: var(--fondoMain);/*aplicacion de variable*/
+    background-color: var(--colorPanel);/*aplicacion de variable*/
     position: fixed;
     top:0;
     right: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
     padding: 40px 10px  010px ;
+    overflow: scroll;/*scroll panel texto*/
 }
 
-.tituloSection{
+
+ /*titulo seccion Img y Texto*/
+ .tituloSection{
     text-align: center;
 }
 
 /* h3 de cada seccion*/
 .tituloPropiedades{
     font-size: 16px;
-    padding: 10px
+    padding: 15px 0 5px 0;
 }
 
+/*Input URL imgen meme*/
+.urlImgMeme{
+    width: 100%;
+}
+
+.panelFondoImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.colorFondoImg{
+    width: 49%;
+}
+
+.luminFondo{
+    width: 49%;
+}
+
+label{
+    display: block;
+    padding: 5px 0 0 0;
+    font-size: 14px;
+}
+
+/*Input range estilos*/
+input[type='range'] {
+    width: 100%;
+    background-color: var(--color);
+    border-radius: 10px;
+    appearance: none;
+    height: 6px;
+    margin-top: 10px;
+}
+  
+.puntoBarra::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--color);
+}
+
+.reestablecer{
+    margin: 15px 0 15px 0;
+}
+
+
 /* estilos de los recuadros y botones de los paneles*/
-.input{
+.colorInputYButton{
     background-color: var(--fondoMain);
     border-radius: 5px;
     border: none;
-    height: 30px;
+    height: 36px;
     padding: 8px;
-    color: var (var(--color));
+    color: var(--color);
+    font-family: 'Sintony', sans-serif;
+    font-size: 13px;
+}
+
+.colorInputYButton:hover{
+    background-color: var(--colorHeader);
+    transition: 0.2s;
+}
+
+/*inputs de texto superior e inferior*/
+.inputTextMeme{
+    width: 100%;
+    resize: vertical;
 }
 
 /* ancho caja para cambiar tipografias*/
 .familiaFuente{
-    width: 252px;
+    width: 100%;
 }
 
 /*botones de alineacion y tamaño de fuente */
 .tamanioAlineacion{
     padding: 5px 0 0 0 ;
-    width: 252px;  
+    width: 100%;  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-     
-}
-/*div que contiene botones de alineacion y tamaño fuente*/
-.tamanio{
-    width: 100%;
+    justify-content: space-between;
+    
 }
 
+/*select tamanio de fuente*/
 #tamanioFuente{
-  width: 100%;  
+  width: 49%; 
+  margin: 0 2.5px 0 0;
 }
 
+/*div que contiene los botones de alieacion*/
 .buttonAlign{
-    width: 50%;
+    width: 49%;
 }
 
 /*Ancho de los botones d ealieacion*/
@@ -194,7 +265,7 @@ body{
     top:15px;
     right: 40px;
     z-index: 1;
-    background-color: var(--fondoMain);
+    background-color: var(--colorPanel);
     border: 0;
     font-size: 24px;
     color: var(--color);
@@ -202,9 +273,18 @@ body{
 
 /*color de tipografia y fondo*/
 
-.colorFondoyTipografia{
-    width: 50%;
-    font-size: 14px;
+.colorTextoYFondo{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*div que contiene los botones de color de texto y fondo*/
+.inputColorYFondo{
+  width: 49%;
+  margin: 0 4px 0 0;  
 }
 
 .check{
@@ -225,7 +305,7 @@ input[type='color']{
     margin-right: 10px;
 }
 
-/*clases contorno texto*/
+/*BOTONES CONTORNO clases contorno texto*/
 .sinContorno{
     text-shadow: none;
 }
@@ -235,6 +315,14 @@ input[type='color']{
 
 .contornoOscuro{
     text-shadow: rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px;
+}
+
+/*boton espaciado e interlineado*/
+.anchoEspaciadoInterlineado{
+    width: 100%;
+}
+.interlineado{
+    margin-bottom: 10px;
 }
 
 
@@ -260,6 +348,7 @@ input[type='color']{
     }
     .cerrar{
         background-color: var(--colorPanel);
+        display: none;
     }
 }
 

@@ -8,7 +8,10 @@
     <script src="https://kit.fontawesome.com/5f812df695.js" crossorigin="anonymous"></script>
     <title> 📸Editor de Memes</title>
 </head>
+
+<!-- el body tiene definida una clase para hacer cambio a claro y oscuro-->
 <body class="modoClaro">
+  
     <!-- HEADER-->
     <header class="modoClaro panelInicio" >
         <h1 class="tituloApp ">Generador de Memes</h1>
@@ -48,29 +51,29 @@
             </main>
 
             <!--ASIDE PANEL OCULTO-->
-            <aside class="panelControl modoClaro ocultar" id="panel">
+            <aside class="panelControl modoClaro ocultar" id="panelAside">
                 <button class="cerrar button" id="buttonClose"><i class="fas fa-window-close"></i></button>
 
-                <!-- ASIDE PANEL IMAGEN-->
+                <!-- SECTION PANEL IMAGEN-->
                 <section class="panelImagen">
                     <h2 class="tituloSection">IMAGEN</h2>
-                    <div class="inputUrl">
+                    <div>
                         <h3 class="tituloPropiedades">URL</h3>
-                        <input type="text" name="" id="" class="input urlImgMeme">
+                        <input type="text" name="" id="" class="colorInputYButton urlImgMeme">
                     </div>
 
                     <!-- FONDO-->
-                    <div class="panelFondo">
+                    
                         <h3 class="tituloPropiedades">FONDO</h3>
-                        <div >
+                        <div class="panelFondoImg">
                             
-                            <div class="color input">
-                                <input type="color" name="" id="colorFondoDiv">ut
+                            <div class="color colorInputYButton colorFondoImg">
+                                <input type="color" name="" id="colorFondoDiv">
                                 <span id="nombreColorFondoDiv">#FFFFF</span>
                             </div>
                            
-                            <div>
-                                <select name="" id="" class="input">
+                            <div class="luminFondo">
+                                <select name="" id="" class="colorInputYButton">
                                     <option value="">Ninguno</option>
                                     <option value="">Aclarar</option>
                                     <option value="">Oscurecer</option>
@@ -80,60 +83,60 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    
 
                     <!-- FILTROS-->
 
                     <div>
-                        <h3>FILTROS</h3>
-                        <div class="barra">
+                        <h3 class="tituloPropiedades">FILTROS</h3>
+                        <div >
                             <label for="brillo">Brillo</label>
-                            <input type="range" name="" id="brillo">
+                            <input type="range" name="" id="brillo" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div >
                             <label for="opacidad">Opacidad</label>
-                            <input type="range" name="" id="opacidad">
+                            <input type="range" name="" id="opacidad" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div >
                             <label for="contraste">Contraste</label>
-                            <input type="range" name="" id="contraste">
+                            <input type="range" name="" id="contraste" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div >
                             <label for="desenfoque">Desenfoque</label>
-                            <input type="range" name="" id="desenfoque">
+                            <input type="range" name="" id="desenfoque" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div>
                             <label for="escala">Escala de Grises</label>
-                            <input type="range" name="" id="escala">
+                            <input type="range" name="" id="escala" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div >
                             <label for="sepia">Sepia</label>
-                            <input type="range" name="" id="sepia">
+                            <input type="range" name="" id="sepia"class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div>
                             <label for="hue">Hue</label>
-                            <input type="range" name="" id="hue">
+                            <input type="range" name="" id="hue" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div >
                             <label for="saturado">Saturado</label>
-                            <input type="range" name="" id="saturado">
+                            <input type="range" name="" id="saturado" class="puntoBarra">
                         </div>
 
-                        <div class="barra">
+                        <div>
                             <label for="negativo">Negativo</label>
-                            <input type="range" name="" id="negativo">
+                            <input type="range" name="" id="negativo" class="puntoBarra">
                         </div>
                         
                     </div>
 
-                    <button>Restablecer Filtros</button>
+                    <button class="colorInputYButton reestablecer">Restablecer Filtros</button>
 
                 </section>
 
@@ -145,9 +148,7 @@
                     <div>
                         <h3 class="tituloPropiedades">SUPERIOR</h3>
                             
-                            <textarea  name="" id="topText" cols="30" rows="2" class="input">
-                            Top Text
-                            </textarea>
+                            <textarea  name="" id="topText" minlength="1" maxlength="50" class="colorInputYButton inputTextMeme">Top Text</textarea>
                         <div class="check">
                             <input type="checkbox" name="" id="checkTopTex" >
                             <label for="topText">Sin texto superior</label>
@@ -156,9 +157,7 @@
 
                     <div>
                         <h3 class="tituloPropiedades">INFERIOR</h3>
-                        <textarea name="" id="bottomText" cols="30" rows="2" class="input">
-                            Bottom Text
-                        </textarea>
+                        <textarea name="" id="bottomText" minlength="1" maxlength="50" class="colorInputYButton inputTextMeme">Bottom Text</textarea>
                         <div>
                             <input type="checkbox" name="" id="checkBottomTex">
                             <label for="bottomText">Sin texto inferior</label>
@@ -170,7 +169,7 @@
                         <h3 class="tituloPropiedades">FUENTE</h3>
                         <!-- Tipo Fuente-->
                         
-                        <select name="" id="selectTipodrafias" class="familiaFuente input">
+                        <select name="" id="selectTipodrafias" class="familiaFuente colorInputYButton">
                             <option value="Impact">Impact</option>
                             <option value="Arial">Arial</option>
                             <option value="'Trebuchet MS'">Trebuchet</option>
@@ -184,18 +183,18 @@
                         
                         <div class="tamanioAlineacion">
                         <!-- Tamañio Fuente-->
-                            <div class="tamamio">
-                                <input type="number" name="" id="tamanioFuente" class="input " min="10" max="40" value="40">
-                            </div>
+                            
+                                <input type="number" name="" id="tamanioFuente" class="colorInputYButton " min="10" max="40" value="40">
+                            
                         <!-- Alineacion Fuente-->
                             <div class="buttonAlign">
-                                <button class="left input buttonAncho">
+                                <button class="left colorInputYButton buttonAncho">
                                     <i class="fas fa-align-left"></i>
                                 </button>
-                                <button class="center input buttonAncho">
+                                <button class="center colorInputYButton buttonAncho">
                                     <i class="fas fa-align-center"></i>
                                 </button>
-                                <button class="right input buttonAncho">
+                                <button class="right colorInputYButton buttonAncho">
                                     <i class="fas fa-align-right"></i>
                                 </button>
                             </div>
@@ -206,18 +205,18 @@
                         
                     <div class="colorTextoYFondo">
                         <!-- Color de Texto-->
-                        <div class="colorTexto">
+                        <div class="inputColorYFondo">
                             <h3 class="tituloPropiedades">COLOR</h3>
-                            <div class="input colorFondoyTipografia">
+                            <div class="colorInputYButton">
                                 <input type="color" name="colorDeTexto" id="colorDeTexto"  value="#000000">
                                 <span id="refSpanTexto">#000000</span>
                             </div>
+                        </div>
 
-                            </div>
                         <!-- Color de Fondo-->
-                         <div class="colorFondo">
+                         <div class="inputColorYFondo">
                             <h3 class="tituloPropiedades">FONDO</h3>
-                            <div class="input colorFondoyTipografia">
+                            <div class="colorInputYButton">
                                 <input type="color" name="colorDeFondo" id="colorDeFondo" value="#FFFFFF">
                                 <span id="refSpanFondo">#FFFFFF</span>
                             </div>
@@ -235,9 +234,9 @@
                     <div class="contorno">
                         <h3 class="tituloPropiedades">CONTORNO</h3>
                         <div class="buttonContorno">
-                            <button class="ninguno input">Ninguno</button>
-                            <button class="claro input">Claro</button>
-                            <button class="oscuro input">Oscuro</button>
+                            <button class="ninguno colorInputYButton">Ninguno</button>
+                            <button class="claro colorInputYButton">Claro</button>
+                            <button class="oscuro colorInputYButton">Oscuro</button>
                         </div>
                     </div>
                     
@@ -245,14 +244,14 @@
 
                     <div class="espaciado">
                         <h3 class="tituloPropiedades">ESPACIADO</h3>
-                        <input type="number" name="" id="espaciado" max="20" min="10" value="10" class="input ">
+                        <input type="number" name="" id="espaciado" max="20" min="10" value="10" class="colorInputYButton anchoEspaciadoInterlineado">
                     </div>
 
                     <!-- Interlineado-->
 
                     <div class="interlineado">
                         <h3 class="tituloPropiedades">INTERLINEADO</h3>
-                        <select name="" id="interlineado" class="input">
+                        <select name="" id="interlineado" class="colorInputYButton anchoEspaciadoInterlineado">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2">1.2</option>
