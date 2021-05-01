@@ -19,7 +19,7 @@ body.modoClaro{
 }
 
 body.modoOscuro{
-   --colorFondo: rgb(52, 63, 62);
+   --colorFondo: rgb(18, 22, 22);
     --color: rgb(220, 237, 255);
     --fondoMain: rgb(18, 22, 22);
     --colorHeader: rgb(80, 90, 91);
@@ -40,6 +40,7 @@ body{
     background-color: var(--fondoMain);/*aplicacion de variable*/
 }
 
+
 /*Titulo panel inicio*/
 
 .panelInicio{
@@ -49,16 +50,14 @@ body{
 .tituloApp{
     font-family: 'Londrina Solid', cursive;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 /*Botones panel inicio*/
-
 .headerButtonContainer{
     text-align: center;
-    padding: 10px;
 }
 
 .buttonHeader{
@@ -70,7 +69,7 @@ body{
     height: 30px;
     background-color: var(--colorHeader);
     color: var(--color);
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .buttonHeader:hover{
@@ -87,14 +86,23 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px 0 0 0;
     
+    
+}
+
+.recuadroMeme{
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .imgMeme{
     background-color: black;
-    width: 610px;
-    height: 470px;
+    width: 400px;
+    height: 330px;
     display: flex;
     background-repeat: no-repeat;
     background-size: contain;
@@ -105,10 +113,10 @@ body{
 /*texto arriba y abajo de la imagen*/
 .textMeme{
     font-family: Impact;
-    font-size: 40px;
+    font-size: 20px;
     background-color: white;
-    width: 610px;
-    height: 70px;
+    width: 400px;
+    height: 5%;
     text-align: center;
     padding: 17px 0 0 0;
     color: rgb(52, 63, 62);
@@ -122,7 +130,7 @@ body{
     border: 0 ;
     border-radius: 5px;
     width: 160px;
-    height: 50px;
+    height: 40px;
     margin: 20px;
 
 }
@@ -145,6 +153,7 @@ body{
  /*titulo seccion Img y Texto*/
  .tituloSection{
     text-align: center;
+    font-size: 18px;
 }
 
 /* h3 de cada seccion*/
@@ -175,7 +184,7 @@ body{
 label{
     display: block;
     padding: 5px 0 0 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /*Input range estilos*/
@@ -199,7 +208,7 @@ input[type='range'] {
 }
 
 .reestablecer{
-    margin: 15px 0 15px 0;
+    margin: 10px 0 10px 0;
 }
 
 
@@ -208,11 +217,11 @@ input[type='range'] {
     background-color: var(--fondoMain);
     border-radius: 5px;
     border: none;
-    height: 36px;
+    height: 30px;
     padding: 8px;
     color: var(--color);
     font-family: 'Sintony', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .colorInputYButton:hover{
@@ -239,7 +248,6 @@ input[type='range'] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
 
 /*select tamanio de fuente*/
@@ -297,12 +305,13 @@ input[type='color']{
     width: 18px;
     height: 18px;
     min-width: 18px;
-    border-radius: 50%;
     border: 0;
     margin: 0;
     padding: 0;
     cursor: pointer;
     margin-right: 10px;
+    background: none;
+    
 }
 
 /*BOTONES CONTORNO clases contorno texto*/

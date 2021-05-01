@@ -93,6 +93,66 @@ colorFondoDiv.addEventListener("input", ()=>{
     nombreColorFondoDiv.textContent = `${colorFondoDiv.value}`;
 });
 
+//Select de Efectos de Imagen
+const blendMode = document.querySelector("#blendMode");
+
+blendMode.addEventListener("input", ()=> {
+    imgMeme.style.backgroundBlendMode = blendMode.value;
+});
+
+
+
+//SLIDERS
+
+const brightness = document.getElementById("brightness-slider");
+const opacity = document.getElementById("opacity-slider");
+const contrast = document.getElementById("contrast-slider");
+const blurs = document.getElementById("blur-slider");
+const grayscale = document.getElementById("grayscale-slider");
+const sepia = document.getElementById("sepia-slider");
+const hue = document.getElementById("hue-slider");
+const saturate = document.getElementById("saturate-slider");
+const invert = document.getElementById("invert-slider");
+
+
+const imgFilter = () => {
+    imgMeme.style.filter = `brightness(${brightness.value})
+                            opacity(${opacity.value})
+                            contrast(${contrast.value}%)
+                            blur(${blurs.value}px)
+                            grayscale(${grayscale.value}%)
+                            sepia(${sepia.value}%)
+                            hue-rotate(${hue.value}deg)
+                            saturate(${saturate.value}%)
+                            invert(${invert.value})`;
+}
+
+brightness.addEventListener("change",imgFilter);
+opacity.addEventListener("change",imgFilter);
+contrast.addEventListener("change",imgFilter);
+blurs.addEventListener("change",imgFilter);
+grayscale.addEventListener("change",imgFilter);
+sepia.addEventListener("change",imgFilter);
+hue.addEventListener("change",imgFilter);
+saturate.addEventListener("change",imgFilter);
+invert.addEventListener("change",imgFilter);
+
+//Reset filtros
+
+const resetFiltros = document.getElementById("resetFiltros");
+
+resetFiltros.addEventListener("click", ()=>{
+    imgMeme.style.filter = brightness.value="1"; 
+                            opacity.value="1";
+                            contrast.value="100";
+                            blurs.value = "1";
+                            grayscale.value = "0";
+                            sepia.value="0";
+                            hue.value="0";
+                            saturate.value="100";
+                            invert.value="0";
+                            imgFilter(); 
+});
 
 
 
