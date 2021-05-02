@@ -161,12 +161,12 @@ const downloadMeme = document.querySelector(".downloadMeme");
 
 
 downloadMeme.addEventListener("click",()=>{
-    domtoimage.toBlob(recuadroMeme)
-      .then(function (blob) {
+    domtoimage.toBlob(recuadroMeme).then(function (blob) {
       window.saveAs(blob, 'meme.png');
     });
   });
 
+  
 //***** PANEL TEXTO EVENTOS ********* */
 
 //indicación para que en el recuadro de texto de arriba y abajo de la imagen se vea lo que el usuario escriba en el text area del panel de texto:
