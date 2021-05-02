@@ -11,6 +11,11 @@ En ambos casos se debe realizar la misma versión en "modo claro" y "modo oscuro
 
 El objetivo es poder generar interacción con el usuario mediante los eventos del DOM.
 
+**Metodología de trabajo**:
+
+Se comenzo el desarrolo con el maquetado, desde mobile first, luego se fueron agregando las funcionalidades mediante JS que solicitaban los distintos campos.
+Teniendo avanzadas las interacciones con JS se finalizaron los estilos en CSS y la versión Desktop.
+
 ### Paleta colores utilizada:
 - rgb(220, 237, 255)
 - rgb(148, 176, 218)
@@ -28,11 +33,8 @@ El objetivo es poder generar interacción con el usuario mediante los eventos de
 
 - **Sintony**: @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
+Los íconos fueron extraidos de Fontawesome.
 
-**Metodología de trabajo**:
-
-Se comenzo el desarrolo con el maquetado, desde mobile first, luego se fueron agregando las funcionalidades mediante JS que solicitaban los distintos campos.
-Teniendo avanzadas las interacciones con JS se finalizaron los estilos en CSS y la versión Desktop.
 
 
 
