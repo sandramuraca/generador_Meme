@@ -137,6 +137,7 @@ hue.addEventListener("change",imgFilter);
 saturate.addEventListener("change",imgFilter);
 invert.addEventListener("change",imgFilter);
 
+
 //Reset filtros
 
 const resetFiltros = document.getElementById("resetFiltros");
@@ -154,7 +155,17 @@ resetFiltros.addEventListener("click", ()=>{
                             imgFilter(); 
 });
 
+//DESGARGA IMAGEN
+const recuadroMeme = document.querySelector(".recuadroMeme");
+const downloadMeme = document.querySelector(".downloadMeme");
 
+
+downloadMeme.addEventListener("click",()=>{
+    domtoimage.toBlob(recuadroMeme)
+      .then(function (blob) {
+      window.saveAs(blob, 'meme.png');
+    });
+  });
 
 //***** PANEL TEXTO EVENTOS ********* */
 
@@ -262,6 +273,16 @@ colorFondo.addEventListener("input",()=>{
     textoUsuarioBottom.style.backgroundColor = colorFondo.value;
     referenciaColorFondo.textContent = colorFondo.value;//actualiza referencia color de fondo en el span
 });
+
+//-----FONDO TRANSPARENTE------
+
+const backgroundTransparent = document.querySelector("#backgroundTransparent");
+
+backgroundTransparent.addEventListener("input",()=>{
+    textoUsuarioTop.style = `background-color: transparent;`
+    textoUsuarioBottom.style = `background-color: transparent;`
+});
+
 
 //--------CONTORNO--------
 const sinContorno = document.querySelector(".ninguno");

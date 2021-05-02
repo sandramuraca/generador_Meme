@@ -132,8 +132,14 @@ align-items: center;
     width: 160px;
     height: 40px;
     margin: 20px;
-
 }
+.downloadMeme:hover{
+    background-color: rgb(65, 131, 110);
+    box-shadow: 7px 7px 24px 3px rgba(46,172,176,0.81);
+    -webkit-box-shadow: 7px 7px 24px 3px rgba(46,172,176,0.81);
+    -moz-box-shadow: 7px 7px 24px 3px rgba(46,172,176,0.81);
+}
+
 
 /*Aside*/
 .panelControl{
