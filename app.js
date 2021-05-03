@@ -75,13 +75,26 @@ buttonClaroOscuro.addEventListener("click", ()=>{
 //IMPUT IMG
 const urlImgMeme = document.querySelector(".urlImgMeme");
 
+//SELECCIONAR ARCHIVO
+/*const selectImg = document.querySelector(".selectImg");*/
+
+
 //DIV IMG
 const imgMeme = document.querySelector(".imgMeme");
+
 
 urlImgMeme.addEventListener("input", ()=>{
     const url = urlImgMeme.value;
     imgMeme.style.backgroundImage = `url('${url}')`;
 });
+
+/*selectImg.addEventListener("input", ()=>{
+    const url = selectImg.value;
+    imgMeme.style.backgroundImage = `url('${url}')`;
+});*/
+
+
+
 
 //COLOR FONDO DIV IMG
 const colorFondoImg = document.querySelector("#colorFondoImg");//div img
@@ -235,14 +248,7 @@ tamanioFuente.addEventListener("input", () => {
 );
 
 //--------ALINEACION--------
-const alignLeft = document.querySelector(".left");
-const alignCenter = document.querySelector(".center");
-const alignRight = document.querySelector(".right");
 
-alignLeft.addEventListener("click", () => {
-    textoUsuarioTop.style = `text-align: left;`
-    textoUsuarioBottom.style = `text-align: left;`
-})
 
 alignCenter.addEventListener("click", () => {
     textoUsuarioTop.style = `text-align: center;`
