@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5f812df695.js" crossorigin="anonymous"></script>
+
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" 
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" 
+    crossorigin="anonymous">
+    </script>
+    <!--FileSaver-->
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" 
+    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" 
+    crossorigin="anonymous">
+    </script>
+    
     <title> 📸Editor de Memes</title>
+
 </head>
 
 <!-- el body tiene definida una clase para hacer cambio a claro y oscuro-->
@@ -38,9 +52,7 @@
             <main class="memeContainer">
                 <div class="recuadroMeme">
                     <p class="textMeme" id="textoUsuarioTop">TOP TEXT</p>
-                    <div class="imgMeme" id="colorFondoImg"> 
-                      <img src="" alt="" >
-                    </div>
+                    <div class="imgMeme" id="colorFondoImg"></div>
                     <p class="textMeme" id="textoUsuarioBottom">BOTTOM TEXT</p>
                 </div>
 
@@ -155,6 +167,7 @@
                         <h3 class="tituloPropiedades">SUPERIOR</h3>
                             
                             <textarea  name="" id="topText" minlength="1" maxlength="50" class="colorInputYButton inputTextMeme">Top Text</textarea>
+
                         <div class="check">
                             <input type="checkbox" name="" id="checkTopTex" >
                             <label for="topText">Sin texto superior</label>
@@ -194,13 +207,13 @@
                             
                         <!-- Alineacion Fuente-->
                             <div class="buttonAlign">
-                                <button class="left colorInputYButton buttonAncho">
+                                <button class="alingLeft colorInputYButton buttonAncho">
                                     <i class="fas fa-align-left"></i>
                                 </button>
-                                <button class="center colorInputYButton buttonAncho">
+                                <button class="alingCenter colorInputYButton buttonAncho">
                                     <i class="fas fa-align-center"></i>
                                 </button>
-                                <button class="right colorInputYButton buttonAncho">
+                                <button class="alingRight colorInputYButton buttonAncho">
                                     <i class="fas fa-align-right"></i>
                                 </button>
                             </div>
@@ -276,18 +289,7 @@
 
     <!-- Lbrerias para descargar imagen-->
     <!-- Dom-to-image-->
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" 
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" 
-    crossorigin="anonymous">
-    </script>
-    <!--FileSaver-->
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" 
-    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" 
-    crossorigin="anonymous">
-    </script>
-    
+  
     <!-- link a JS-->
     <script src="./app.js"></script>
 </body>

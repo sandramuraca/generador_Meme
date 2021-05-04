@@ -82,7 +82,6 @@ const urlImgMeme = document.querySelector(".urlImgMeme");
 //DIV IMG
 const imgMeme = document.querySelector(".imgMeme");
 
-
 urlImgMeme.addEventListener("input", ()=>{
     const url = urlImgMeme.value;
     imgMeme.style.backgroundImage = `url('${url}')`;
@@ -171,13 +170,14 @@ resetFiltros.addEventListener("click", ()=>{
 //DESGARGA IMAGEN
 const recuadroMeme = document.querySelector(".recuadroMeme");
 const downloadMeme = document.querySelector(".downloadMeme");
-
+ console.log(recuadroMeme);
 
 downloadMeme.addEventListener("click",()=>{
-    domtoimage.toBlob(recuadroMeme).then(function (blob) {
-      window.saveAs(blob, 'meme.png');
+    console.log("entre a la funcion");
+    domtoimage.toBlob(document.querySelector(".recuadroMeme")).then(function(blob){
+        window.saveAs(blob, 'meme.png');
     });
-  });
+});
 
   
 //***** PANEL TEXTO EVENTOS ********* */
@@ -190,7 +190,7 @@ const inputTextTop = document.querySelector("#topText");
 const textoUsuarioTop = document.querySelector("#textoUsuarioTop"); 
 
 inputTextTop.addEventListener("input",()=>{
-    textoUsuarioTop.textContent= inputTextTop.value;
+    textoUsuarioTop.innerText= inputTextTop.value;
 });
 
 //--------INPUT PARA TEXTO INFERIOR--------
@@ -200,7 +200,7 @@ const inputBottomText = document.querySelector("#bottomText");
 const textoUsuarioBottom = document.querySelector("#textoUsuarioBottom");
 
 inputBottomText.addEventListener("input",()=>{
-    textoUsuarioBottom.textContent= inputBottomText.value;
+    textoUsuarioBottom.innerText= inputBottomText.value;
 });
 
 
@@ -248,14 +248,21 @@ tamanioFuente.addEventListener("input", () => {
 );
 
 //--------ALINEACION--------
+const alingLeft = document.querySelector(".alingLeft");
+const alingCenter = document.querySelector(".alingCenter");
+const alingRight = document.querySelector(".alingRight");
 
+alingLeft.addEventListener("click", () => {
+    textoUsuarioTop.style = `text-align: left;`
+    textoUsuarioBottom.style = `text-align: left;`
+})
 
-alignCenter.addEventListener("click", () => {
+alingCenter.addEventListener("click", () => {
     textoUsuarioTop.style = `text-align: center;`
     textoUsuarioBottom.style = `text-align: center;`
 })
 
-alignRight.addEventListener("click", () => {
+alingRight.addEventListener("click", () => {
     textoUsuarioTop.style = `text-align: right;`
     textoUsuarioBottom.style = `text-align: right;`
 })
@@ -328,11 +335,3 @@ interlineado.addEventListener("input", ()=>{
 //--------BOTON DESCARGA (?????)---------------
 
 
-/* style.fontSize = `${tamanioFuente.value}px`;*/
-/*const textoUsuarioBottom = document.querySelector("#textoUsuarioBottom");
-
-inputBottomText.addEventListener("input",()=>{
-    textoUsuarioBottom.textContent= inputBottomText.value;
-});*/
-
-/*textoUsuarioBottom.style = `font-size: 40px;`*/
