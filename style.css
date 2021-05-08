@@ -325,6 +325,12 @@ input[type='color']{
     
 }
 
+/*estilo  subir archivo*/
+input[type='file']{
+   width: 100%;
+}
+
+
 /*BOTONES CONTORNO clases contorno texto*/
 .sinContorno{
     text-shadow: none;

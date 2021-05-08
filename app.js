@@ -1,5 +1,6 @@
 "use strict";
 
+
 //--------ASIDE--------
 const panel = document.querySelector("#panelAside");
 
@@ -27,7 +28,6 @@ const panelInicio = document.querySelector(".panelInicio");
 
 //--------PANEL IMG - ASIDE--------
 const panelImag = document.querySelector(".panelImagen"); 
-
 
 //--------PANEL TEXTO - ASIDE--------
 const panelTexto = document.querySelector(".panelTexto"); 
@@ -76,10 +76,9 @@ buttonClaroOscuro.addEventListener("click", ()=>{
 const urlImgMeme = document.querySelector(".urlImgMeme");
 
 //SELECCIONAR ARCHIVO
-/*const selectImg = document.querySelector(".selectImg");*/
-
 
 //DIV IMG
+//imagen por url
 const imgMeme = document.querySelector(".imgMeme");
 
 urlImgMeme.addEventListener("input", ()=>{
@@ -87,12 +86,17 @@ urlImgMeme.addEventListener("input", ()=>{
     imgMeme.style.backgroundImage = `url('${url}')`;
 });
 
-/*selectImg.addEventListener("input", ()=>{
-    const url = selectImg.value;
-    imgMeme.style.backgroundImage = `url('${url}')`;
-});*/
+//imagen por input file
+const inpFile = document.querySelector("#inpFile");
 
-
+inpFile.addEventListener("change", function(){
+    const file = this.files[0];
+    const reader = new FileReader();
+    reader.addEventListener("load", function(){
+        imgMeme.style.backgroundImage = `url(${this.result})`;
+    })
+    reader.readAsDataURL(file); 
+})
 
 
 //COLOR FONDO DIV IMG
@@ -115,7 +119,6 @@ blendMode.addEventListener("input", ()=> {
 
 
 //SLIDERS
-
 const brightness = document.getElementById("brightness-slider");
 const opacity = document.getElementById("opacity-slider");
 const contrast = document.getElementById("contrast-slider");
@@ -151,7 +154,6 @@ invert.addEventListener("change",imgFilter);
 
 
 //Reset filtros
-
 const resetFiltros = document.getElementById("resetFiltros");
 
 resetFiltros.addEventListener("click", ()=>{
@@ -170,7 +172,6 @@ resetFiltros.addEventListener("click", ()=>{
 //DESGARGA IMAGEN
 const recuadroMeme = document.querySelector(".recuadroMeme");
 const downloadMeme = document.querySelector(".downloadMeme");
- console.log(recuadroMeme);
 
 downloadMeme.addEventListener("click",()=>{
     console.log("entre a la funcion");
@@ -332,6 +333,21 @@ interlineado.addEventListener("input", ()=>{
     textoUsuarioBottom.style.leneHeight = interlineado.value;
 });
 
-//--------BOTON DESCARGA (?????)---------------
+
+/* aumento resolucion de descarga de imagen
+
+download.addEventListener("click",()=>{
+    let anchoBase = container.offsetWidth;
+    let altoBase = container.offsetHeight;
+    container.style.width = container.offsetWidth*4 + "px";
+    container.style.height = container.offsetHeight*4 + "px";
+    domtoimage.toBlob(container)
+      .then(function (blob) {
+      window.saveAs(blob, 'meme.png');
+    container.style.width = anchoBase + "px";
+    container.style.height = altoBase + "px";
+    });
+  });
+*/
 
 
