@@ -26,25 +26,25 @@ body.modoOscuro{
     --colorPanel:rgb(52, 63, 62);
 }
 
-
+/*Aplicacion de colores al body*/
 body{
     background-color: var(--colorFondo); /*aplicacion de variable*/
     color: var(--color);
 }
 
-/*header*/
-
+/*------HEADER--------*/
 /*panel Inicio contenedor de la imagen del meme y textos*/
+
 
 .divMeme{
     background-color: var(--fondoMain);/*aplicacion de variable*/
 }
 
-
 /*Titulo panel inicio*/
 
 .panelInicio{
     background-color: var(--colorHeader);
+    width: 100%;
 }
 
 .tituloApp{
@@ -58,6 +58,7 @@ body{
 /*Botones panel inicio*/
 .headerButtonContainer{
     text-align: center;
+    width: 100%;
 }
 
 .buttonHeader{
@@ -65,7 +66,6 @@ body{
     border: 0;
     outline: none;
     padding: 0 10px 0 10px;
-    margin: 5px;
     height: 30px;
     background-color: var(--colorHeader);
     color: var(--color);
@@ -86,9 +86,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 0 0;
-    
-    
+    padding: 40px 0 0 0;
 }
 
 .recuadroMeme{
@@ -99,10 +97,11 @@ justify-content: center;
 align-items: center;
 }
 
+ /*recuadro donde se inserta la imagen*/
 .imgMeme{
     background-color: black;
     width: 400px;
-    height: 330px;
+    height: 400px;
     display: flex;
     background-repeat: no-repeat;
     background-size: contain;
@@ -116,7 +115,7 @@ align-items: center;
     font-size: 20px;
     background-color: white;
     width: 400px;
-    height: 5%;
+    height: 50px;
     text-align: center;
     padding: 17px 0 0 0;
     color: rgb(52, 63, 62);
@@ -155,6 +154,41 @@ align-items: center;
     overflow: scroll;/*scroll panel texto*/
 }
 
+/*icono cruz para cerrar paneles aside*/
+.cerrar{
+    position: fixed;
+    top:15px;
+    right: 40px;
+    z-index: 1;
+    background-color: var(--colorPanel);
+    border: 0;
+    font-size: 24px;
+    color: var(--color);
+}
+
+/*SCROLL ASIDE*/
+/* width */
+.panelControl::-webkit-scrollbar {
+    width: 18px;
+}
+  
+/* Track ("fondo de la barra")*/
+.panelControl::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px var(--colorHeader); 
+    border-radius: 10px;
+}
+   
+/* Handle (" la barra que viene gris por default") */
+.panelControl::-webkit-scrollbar-thumb {
+    background: transparent; 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+.panelControl::-webkit-scrollbar-thumb:hover {
+    background: var(--colorHeader);
+}
+
 
  /*titulo seccion Img y Texto*/
  .tituloSection{
@@ -168,15 +202,27 @@ align-items: center;
     padding: 15px 0 5px 0;
 }
 
+/*inputs de texto superior e inferior*/
+.inputTextMeme{
+    width: 100%;
+    resize: vertical;
+}
+
 /*Input URL imgen meme*/
 .urlImgMeme{
     width: 100%;
 }
 
+
+/*Input file imgen meme*/
 .selectFile{
     width: 100%;
 }
 
+/*estilo  subir archivo*/
+input[type='file']{
+    width: 100%;
+ }
 
 .panelFondoImg{
     display: flex;
@@ -198,7 +244,7 @@ label{
     font-size: 12px;
 }
 
-/*Input range estilos*/
+/*Input range*/
 input[type='range'] {
     width: 100%;
     background-color: var(--color);
@@ -218,6 +264,7 @@ input[type='range'] {
     background: var(--color);
 }
 
+/*boton reestablecer*/
 .reestablecer{
     margin: 10px 0 10px 0;
 }
@@ -238,12 +285,6 @@ input[type='range'] {
 .colorInputYButton:hover{
     background-color: var(--colorHeader);
     transition: 0.2s;
-}
-
-/*inputs de texto superior e inferior*/
-.inputTextMeme{
-    width: 100%;
-    resize: vertical;
 }
 
 /* ancho caja para cambiar tipografias*/
@@ -272,26 +313,12 @@ input[type='range'] {
     width: 49%;
 }
 
-/*Ancho de los botones d ealieacion*/
+/*Ancho de los botones de alineacion*/
 .buttonAncho{
     width: 30%;
 }
 
-
-/*icono cruz para cerrar paneles aside*/
-.cerrar{
-    position: fixed;
-    top:15px;
-    right: 40px;
-    z-index: 1;
-    background-color: var(--colorPanel);
-    border: 0;
-    font-size: 24px;
-    color: var(--color);
-}
-
 /*color de tipografia y fondo*/
-
 .colorTextoYFondo{
     display: flex;
     flex-direction: row;
@@ -325,11 +352,6 @@ input[type='color']{
     
 }
 
-/*estilo  subir archivo*/
-input[type='file']{
-   width: 100%;
-}
-
 
 /*BOTONES CONTORNO clases contorno texto*/
 .sinContorno{
@@ -357,9 +379,9 @@ input[type='file']{
     display: none;
 } 
 
-/*Versión escritorio*/
-@media (min-width: 1000px) {
+/* -----VERSION ESCRITORIO-------*/
 
+@media (min-width: 1000px) {
     .panelControl {
         width: 280px;
         height: 100%;
@@ -378,3 +400,42 @@ input[type='file']{
     }
 }
 
+@media (min-width: 1380px){
+    .imgMeme{
+        width: 800px;
+        height: 600px;
+    }
+    
+    /*texto arriba y abajo de la imagen*/
+    .textMeme{
+        font-size: 30px;
+        width: 800px;
+        height: 60px;
+    }
+}
+@media (max-width: 395px){
+    .imgMeme{
+        width: 360px;
+        height: 400px;
+    }
+    
+    /*texto arriba y abajo de la imagen*/
+    .textMeme{
+        font-size: 20px;
+        width: 360px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 360px){
+    .imgMeme{
+        width: 360px;
+        height: 400px;
+    }
+    
+    .textMeme{
+        font-size: 20px;
+        width: 360px;
+        height: 60px;
+    }
+}
