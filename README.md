@@ -35,6 +35,9 @@ Teniendo avanzadas las interacciones con JS se finalizaron los estilos en CSS y 
 
 Los íconos fueron extraidos de Fontawesome.
 
+- **Deployado**:
+Este proyecto se deployo con Netlify: [Generador de Memes](https://generador-meme-v1.netlify.app/)
+
 
 
 
