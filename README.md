@@ -1,7 +1,7 @@
 ## PROYECTO INTEGRADOR HTML. CSS. JS 💻
 ### GENERADOR DE MEMES
 
-En este proyecto siguiendo los lineamientos dados en el curso se solicita recrear el modelo presentado por ADA del proyecto para crear un Generardor de Memes:
+En este proyecto, siguiendo los lineamientos dados en el curso, se solicita recrear el modelo presentado por ADA del Generardor de Memes:
 
 https://frontend-proyecto-meme.adaitw.org/
 
