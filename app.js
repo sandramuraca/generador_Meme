@@ -9,11 +9,18 @@ const buttonClose =document.querySelector("#buttonClose");
 
 //cuando hago click en boton de cerrar se cierra el panel de aside
 //agrega la clase ocultar
+// ojo con el espaciado
+// esta funcion deberia verse asi
+// buttonClose.addEventListener("click", () => {
+//     panel.classList.add("ocultar");
+// })
 buttonClose.addEventListener("click", ()=>{
     panel.classList.add("ocultar");
 }
 )
 
+
+// estos comentarios son excesivos, tus variables tienen buenos nombres, no necesitas aclarar de mas
 //--------BOTON IMG--------
 const buttonImage = document.querySelector("#buttonImage");
 
@@ -64,6 +71,7 @@ buttonClaroOscuro.addEventListener("click", ()=>{
 
    if (textoButton.innerText == 'Modo Claro'){
         textoButton.innerText = 'Modo Oscuro';
+        // tabulado: el else va a la misma altura que el if
         } else {
         textoButton.innerText = 'Modo Claro';
         }
@@ -106,6 +114,7 @@ const nombreColorFondoDiv = document.querySelector("#nombreColorFondoDiv"); //sp
 
 colorFondoDiv.addEventListener("input", ()=>{
     colorFondoImg.style.backgroundColor = colorFondoDiv.value;
+    // innecesario el interpolado aca 
     nombreColorFondoDiv.textContent = `${colorFondoDiv.value}`;
 });
 
@@ -244,6 +253,7 @@ const tamanioFuente = document.querySelector("#tamanioFuente");
 tamanioFuente.addEventListener("input", () => {
     textoUsuarioTop.style.fontSize = `${tamanioFuente.value}px`;
     textoUsuarioBottom.style.fontSize  = `${tamanioFuente.value}px`;
+    // no dejes console log en entregas
     console.log({textoUsuarioTop,textoUsuarioBottom,tamanio:tamanioFuente.value})
 }
 );
@@ -254,6 +264,7 @@ const alingCenter = document.querySelector(".alingCenter");
 const alingRight = document.querySelector(".alingRight");
 
 alingLeft.addEventListener("click", () => {
+    // no uses backticks si no vas a interpolar, usa comillas dobles
     textoUsuarioTop.style = `text-align: left;`
     textoUsuarioBottom.style = `text-align: left;`
 })
@@ -335,7 +346,7 @@ interlineado.addEventListener("input", ()=>{
 
 
 /* aumento resolucion de descarga de imagen
-
+// no dejes codigo comentado en una entrega!
 download.addEventListener("click",()=>{
     let anchoBase = container.offsetWidth;
     let altoBase = container.offsetHeight;
