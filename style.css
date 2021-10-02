@@ -43,6 +43,7 @@ body{
 /*Titulo panel inicio*/
 
 .panelInicio{
+    /* los divs como header tienen 100% por defecto */
     background-color: var(--colorHeader);
     width: 100%;
 }
@@ -64,6 +65,7 @@ body{
 .buttonHeader{
     font-family: 'Sintony', sans-serif;
     border: 0;
+    /* nunca saques el outline de tus botones */
     outline: none;
     padding: 0 10px 0 10px;
     height: 30px;
@@ -78,7 +80,6 @@ body{
     border-radius: 5px;
 }
 
-
 /*recuadro Central con texto arriba y debajo de la imagen*/
 .memeContainer{
     background-color: var(--fondoMain);  
@@ -89,6 +90,7 @@ body{
     padding: 40px 0 0 0;
 }
 
+/* ojo con el tabulado */
 .recuadroMeme{
 width: 50%;
 display: flex;
@@ -226,6 +228,7 @@ input[type='file']{
 
 .panelFondoImg{
     display: flex;
+    /* innecesario, es lo que viene por defecto */
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -297,6 +300,7 @@ input[type='range'] {
     padding: 5px 0 0 0 ;
     width: 100%;  
     display: flex;
+    /* innecesario */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

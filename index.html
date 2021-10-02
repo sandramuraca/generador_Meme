@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+  <!-- La pagina esta en español, pero el lenguaje del documento es ingles. Un lector de pantalla trataria de 
+leerla en ingles (va a leer "yiniradour di mims") y buscadores como google van a recomendar esta web a 
+angloparlantes.
+El lang del documento debe coincidir con el lenguaje que usan los usuarios de esta pagina.  -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +32,7 @@
 <body class="modoClaro">
   
     <!-- HEADER-->
+<!-- separa tus clases con-guiones, igual que los ids. camelCase es para javascript -->
 
     <header class="modoClaro panelInicio" >
         
@@ -54,6 +60,7 @@
             <main class="memeContainer">
                 <div class="recuadroMeme">
                     <p class="textMeme" id="textoUsuarioTop">TOP TEXT</p>
+     <!-- necesitas un aria label aca para indicarle al lector que hace esta imagen -->
                     <div class="imgMeme" id="colorFondoImg"></div>
                     <p class="textMeme" id="textoUsuarioBottom">BOTTOM TEXT</p>
                 </div>
@@ -67,12 +74,16 @@
 
             <!--ASIDE PANEL OCULTO-->
             <aside class="panelControl modoClaro ocultar" id="panelAside">
+                <!-- hace falta un aria label aca, como sabe el lector de pantalla que es lo que hace este boton? -->
+
                 <button class="cerrar button" id="buttonClose"><i class="fas fa-window-close"></i></button>
 
                 <!-- SECTION PANEL IMAGEN-->
                 <section class="panelImagen">
                     <h2 class="tituloSection">IMAGEN</h2>
                     <div>
+                              <!-- esto no es un titulo, es un label
+                  misma observacion para el resto de tus h3  -->
                         <h3 class="tituloPropiedades">URL</h3>
                         <input type="text" name="" id="" class="colorInputYButton urlImgMeme">
                     </div>
@@ -87,7 +98,7 @@
                     
                         <h3 class="tituloPropiedades">FONDO</h3>
                         <div class="panelFondoImg">
-                            
+                               <!-- si no hay label ni aria label, como sabe el lector que hace este input? -->
                             <div class="color colorInputYButton colorFondoImg">
                                 <input type="color" name="" id="colorFondoDiv">
                                 <span id="nombreColorFondoDiv">#FFFFF</span>
@@ -111,6 +122,7 @@
                     <div>
                         <h3 class="tituloPropiedades">FILTROS</h3>
                         <div >
+                            <!-- el for tiene que ser el id del elemento!! este label no hace nada en terminos de accesibilidad -->
                             <label for="brillo">Brillo</label>
                             <input type="range" name="" id="brightness-slider" min="0" max="1" value="1" step="0.1" class="puntoBarra">
                         </div>
@@ -210,6 +222,7 @@
                             
                         <!-- Alineacion Fuente-->
                             <div class="buttonAlign">
+                                <!-- aria label aca  -->
                                 <button class="alingLeft colorInputYButton buttonAncho">
                                     <i class="fas fa-align-left"></i>
                                 </button>
